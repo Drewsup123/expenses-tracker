@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
+import AppView from './views/AppView'
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          
-        </header>
+        <AppView />
       </div>
     );
   }
