@@ -11,9 +11,19 @@ class Login extends React.Component{
                             <div class="content-panel">
                             <h3 class="title">Sign In</h3>
                             <form>
-                                <input type="text" placeholder="USERNAME" />
-                                <input type="password" placeholder="PASSWORD" />
-                                <button type="button">Submit</button>
+                                <input
+                                    type="text" 
+                                    placeholder="USERNAME" 
+                                    name="username"
+                                    onChange={this.props.change}
+                                />
+                                <input 
+                                    type="password" 
+                                    placeholder="PASSWORD" 
+                                    name="password"
+                                    onChange={this.props.change}
+                                />
+                                <button type="button" onClick={this.props.login}>Submit</button>
                             </form>
                             </div>
                         </div>

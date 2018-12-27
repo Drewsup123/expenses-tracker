@@ -6,8 +6,25 @@ class App extends Component {
   constructor(){
     super();
     this.state = {
-      B_LoggedIn : false
+      B_LoggedIn : false,
+      user : {
+        username : "",
+        password : ""
+      }
     }
+  }
+
+  loginHandler = e => {
+    if(this.state.user.username && this.state.user.password){
+      this.setState({B_LoggedIn : true})
+    }else{
+      alert("Please include both username and password")
+    }
+  }
+
+  changeHandler = e => {
+    this.setState({user : {...this.state.user , [e.target.name] : e.target.value}})
+    console.log(this.state.user)
   }
 
   render() {
@@ -18,7 +35,7 @@ class App extends Component {
         </div>
       );
     }else{
-      return(<Login />)
+      return(<Login login={this.loginHandler} change={this.changeHandler}/>)
     }
 
   }
