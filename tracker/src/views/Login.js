@@ -23,7 +23,6 @@ class Login extends React.Component{
                 <div class="right-item">
                     <div class="slider-panel">
                         <div class="inner-slider-panel">
-                            <p>Sign in to acess your account.</p>
                         </div>
                     </div>
                 </div>
