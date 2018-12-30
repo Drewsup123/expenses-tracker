@@ -5,6 +5,7 @@ class AppView extends React.Component{
         return(        
             <header className="App-header">
                 <h1>Expenses Tracker</h1>
+                <p>by drew johsnongit </p>
             </header>
         )
     }
